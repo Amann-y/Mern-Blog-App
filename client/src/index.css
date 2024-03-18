@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: bisque;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: blueviolet;
+}
+
+.navbar {
+  border-bottom: 1px solid blueviolet;
+}
+
+.nav_img {
+  background-color: beige;
+  box-shadow: rgba(248, 243, 243, 0.25) 0px 54px 55px,
+    rgba(247, 244, 244, 0.12) 0px -12px 30px,
+    rgba(238, 234, 234, 0.12) 0px 4px 6px,
+    rgba(243, 241, 241, 0.17) 0px 12px 13px,
+    rgba(252, 249, 249, 0.09) 0px -3px 5px;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+
+.my-card {
+  position: relative;
+}
+
+.product_del_icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.product_edit_icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: blueviolet;
+}
+
+.div_csv {
+  position: fixed;
+  top: 500px;
+  right: 10px;
+  transition: all 0.3s;
+}
+
+.div_csv button {
+  border-radius: 50%;
+}
+
+.div_csv:hover {
+  transform: translateY(5px);
+}
+
+.profile_card_1 {
+  max-width: 13rem;
+  box-shadow: rgba(218, 206, 206, 0.35) 0px 5px 15px;
+}
+
+.profile_card_2 {
+  max-width: 13rem;
+  min-width: 13rem;
+
+  box-shadow: rgba(218, 206, 206, 0.35) 0px 5px 15px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile_card_2 h3,
+h4,
+h5 {
+  font-size: 1.2rem;
+  font-family: cursive;
+}
+
+.profile_card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  margin-top: auto !important;
+  text-align: center;
+  font-family: cursive;
+  padding-bottom: 0.4rem;
+  padding: 1rem 1rem;
+}
+
+.layout_div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.masthead {
+  background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  min-height: 70vh;
+  position: relative;
+  color: whitesmoke;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.color-overlay h1 {
+  font-size: 4rem;
+}
+
+.color-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .masthead {
+    min-height: 40vh;
+  }
+
+  .color-overlay h1 {
+    font-size: calc(1.525rem + 3.3vw);
+  }
+}
+
+.nav-link::after {
+  content: "";
+  transition: all 0.2s;
+  opacity: 0;
+  height: 2px;
+  width: 3.5rem;
+  background-color: blueviolet;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link {
+  position: relative;
+}
+
+@media (min-width: 560px) {
+  .nav-tabs {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 993px) {
+  .profile_card_2 {
+    min-width: 25rem;
+  }
+
+  .my-card {
+    transition: all 0.3s;
+  }
+
+  .my-card:hover {
+    transform: scale(1.1);
+  }
+  .nav-link::after {
+    content: "";
+    transition: all 0.2s;
+    opacity: 0;
+    height: 2px;
+    width: 100%;
+    background-color: blueviolet;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container::-webkit-scrollbar-track:horizontal {
+  scrollbar-width: thin;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: blueviolet;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(109, 47, 167);
+}
+
